@@ -392,7 +392,7 @@ class Server(object):
             loop.run_forever()
         except KeyboardInterrupt:
             if running_on_windows is True:
-                self.stop_server()
+                self.stop_server('wins')
         finally:
             loop.run_until_complete(loop.shutdown_asyncgens())
             loop.close()
